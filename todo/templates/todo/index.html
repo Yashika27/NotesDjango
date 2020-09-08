@@ -118,7 +118,10 @@
   {% endif %}
 
 <br><br><br><br>
+
   <div class="row">
+       <div class="col-md-1"></div>
+    <div class="col-md-9">
       {% for i in list %}
        <div class="col-md-1"> </div>
       <div class="card">
@@ -137,10 +140,11 @@
         <br />
         <form action="/del/{{i.id}}" method="POST" style=" padding-right: 4%; padding-bottom: 3%;">
           {% csrf_token %}
-          <button value="remove" type="submit"  class="btn btn-primary" style="text-align:right"><span class="glyphicon glyphicon-trash"></span> &nbsp; remove</button>
+ <button value="remove" type="submit" class="btn btn-primary" style="float: right;"><span class="glyphicon glyphicon-trash"></span> &nbsp; remove</button>
         </form>
       </div>
       {% endfor%}
+    </div>
     </div>
 </body>
 
